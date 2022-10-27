@@ -3,7 +3,6 @@ on:
   schedule:
     - cron: '0 0 1 1,2,3,4,5,6,7,8,9,10,11,12'
   issues:
-    workflow_dispatch:
     types: [opened, edited, closed]
   push:
     branches: [ "master" ]
@@ -13,6 +12,8 @@ on:
   gollum:
   workflow_dispatch:
 jobs:
+  test_schedule:
+    runs-on: ubuntu-latest
   build:
     runs-on: ubuntu-latest
     steps:
