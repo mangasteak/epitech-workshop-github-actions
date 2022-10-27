@@ -13,7 +13,9 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
       - name: Set date and time
-        run: echo Today is "(date +'%Y-%m-%dT%H:%M:%S')"
+        run: |
+          echo Today is
+          echo {{ github.event.repository.updated_at}}
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
