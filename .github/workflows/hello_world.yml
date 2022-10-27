@@ -1,6 +1,4 @@
-name: Hello_world
 on:
-  workflow_dispatch:
   schedule:
     - cron: '0 0 1 1-12'
   issues:
@@ -11,6 +9,7 @@ on:
     branches: [ "master" ]
     types: [ready_for_review]
   gollum:
+  workflow_dispatch:
 jobs:
   test_schedule:
     runs-on: ubuntu-latest
